@@ -1,0 +1,21 @@
+# Operating System Files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Temporary files
+*.tmp
+*.log
+*.bak*
+
+# Dokumen evaluasi, soal, kunci jawaban, dan tugas privat
+*Kunci_Jawaban*
+*Rubrik*
+*Tugas*
+*Soal*
+*UTS*
+*UAS*
+*Pengganti*
+
+.vercel
+.env*

@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-id="ALT Siklus 1 Interaktif &amp; Komparator HLT vs ALT — AI-TPACK SPLDV" data-en="Interactive ALT Cycle 1 &amp; HLT vs ALT Comparator — AI-TPACK SPLDV">ALT Siklus 1 Interaktif &amp; Komparator HLT vs ALT — AI-TPACK SPLDV</title>
+  <meta name="description" content="Actual Learning Trajectory (ALT) Siklus 1 Lapangan. Matriks Komparator HLT vs ALT, Unexpected Findings, dan Rekomendasi Siklus 2.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- UNIFIED STICKY SITE NAVBAR -->
+  <header class="site-header">
+    <div class="site-nav-container">
+      <a href="index.html" class="nav-brand">
+        <div class="brand-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+        </div>
+        <div class="brand-text">
+          <span>AI-TPACK</span>
+          <span class="brand-tag">Siklus 1</span>
+        </div>
+      </a>
+
+      <nav class="nav-menu" aria-label="Suite Navigation">
+        <a href="index.html" class="nav-link">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          <span data-id="Dashboard" data-en="Dashboard">Dashboard</span>
+        </a>
+        <a href="HLT_Siklus1_Interactive.html" class="nav-link">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z"/><path d="M6 6h10M6 10h10"/></svg>
+          <span data-id="HLT Siklus 1" data-en="HLT Cycle 1">HLT Siklus 1</span>
+        </a>
+        <a href="ALT_Siklus1_Interactive.html" class="nav-link active">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+          <span data-id="ALT Lapangan" data-en="Field ALT">ALT Lapangan</span>
+        </a>
+        <a href="LKM_P1_Interactive.html" class="nav-link">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+          <span data-id="LKM P1: Audit" data-en="LKM P1: Audit">LKM P1: Audit</span>
+        </a>
+        <a href="LKM_P2_Interactive.html" class="nav-link">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+          <span data-id="LKM P2: Prompt" data-en="LKM P2: Prompt">LKM P2: Prompt</span>
+        </a>
+        <a href="Angket_Pre_Post_Test.html" class="nav-link">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+          <span data-id="Angket Evaluasi" data-en="Evaluation Survey">Angket Evaluasi</span>
+        </a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="nav-action-btn" onclick="exportToPrint()" data-id="Cetak Matriks ALT" data-en="Print ALT Matrix" title="Print ALT Matrix">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+          <span>PDF</span>
+        </button>
+        <button type="button" class="btn-toggle-theme nav-action-btn" onclick="toggleTheme()" aria-label="Toggle Theme">
+          <svg class="sun-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+          <span>Mode Terang</span>
+        </button>
+        <button type="button" class="btn-toggle-lang nav-action-btn" onclick="toggleLanguage()" aria-label="Toggle Language">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          <span>English</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO EXECUTIVE HEADER -->
+  <header class="hero-header">
+    <div class="hero-content">
+      <div style="display:flex; gap:10px; flex-wrap:wrap;">
+        <span class="badge-tag gold" data-id="Actual Learning Trajectory (ALT)" data-en="Actual Learning Trajectory (ALT)">Actual Learning Trajectory (ALT)</span>
+        <span class="badge-tag" data-id="Observasi Lapangan Siklus 1" data-en="Cycle 1 Field Observations">Observasi Lapangan Siklus 1</span>
+      </div>
+      <h1 class="gradient-text" data-id="Matriks Komparator HLT vs ALT Siklus 1" data-en="HLT vs ALT Comparator Matrix Cycle 1">Matriks Komparator HLT vs ALT Siklus 1</h1>
+      <p class="hero-sub" data-id="Dokumentasi Evaluasi Lapangan Lintasan Belajar Aktual Calon Guru Matematika &amp; Implikasi Operasional untuk HLT Siklus 2." data-en="Field Evaluation Documentation of Pre-Service Mathematics Teacher Learning Trajectories &amp; Operational Cycle 2 Implications.">
+        Dokumentasi Evaluasi Lapangan Lintasan Belajar Aktual Calon Guru Matematika &amp; Implikasi Operasional untuk HLT Siklus 2.
+      </p>
+      <div class="meta-pills">
+        <div class="meta-pill" data-id="<strong>Pelaksanaan:</strong> Siklus 1" data-en="<strong>Implementation:</strong> Cycle 1"><strong>Pelaksanaan:</strong> Siklus 1</div>
+        <div class="meta-pill" data-id="<strong>99 Indikator Observasi</strong> (A1–ET3)" data-en="<strong>99 Observation Indicators</strong> (A1–ET3)"><strong>99 Indikator Observasi</strong> (A1–ET3)</div>
+        <div class="meta-pill" data-id="<strong>Kerjasama:</strong> Universitas Katolik Santo Agustinus Hippo &amp; Universitas PGRI Ronggolawe" data-en="<strong>Institutions:</strong> Universitas Katolik Santo Agustinus Hippo &amp; Universitas PGRI Ronggolawe"><strong>Kerjasama:</strong> Universitas Katolik Santo Agustinus Hippo &amp; Universitas PGRI Ronggolawe</div>
+        <div class="meta-pill" data-id="<strong>Tim Peneliti:</strong> Dr. Siti Suprihatiningsih, M.Pd. &middot; Gusti Uripno, M.Pd. &middot; Rudy Hartono, S.Kom., M.Kom." data-en="<strong>Research Team:</strong> Dr. Siti Suprihatiningsih, M.Pd. &middot; Gusti Uripno, M.Pd. &middot; Rudy Hartono, S.Kom., M.Kom."><strong>Tim Peneliti:</strong> Dr. Siti Suprihatiningsih, M.Pd. &middot; Gusti Uripno, M.Pd. &middot; Rudy Hartono, S.Kom., M.Kom.</div>
+        <div class="meta-pill"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg> <strong data-id="Akses Realtime:" data-en="Realtime Access:">Akses Realtime:</strong>&nbsp;<span class="realtime-date-text"></span></div>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN CONTAINER -->
+  <main class="container">
+
+    <!-- LEGEND & DASHBOARD METRICS -->
+    <section style="margin-bottom: 30px;">
+      <div class="card card-primary">
+        <h3 style="font-size:1.1rem; margin-bottom:12px;" data-id="Panduan Simbol Status Evaluation Matriks ALT" data-en="ALT Matrix Evaluation Status Symbol Guide">Panduan Simbol Status Evaluation Matriks ALT</h3>
+        <div class="grid-4">
+          <div style="display:flex; align-items:center; gap:8px;">
+            <span class="status-badge status-sesuai" data-id="✓ Sesuai" data-en="✓ Conforming">✓ Sesuai</span>
+            <span style="font-size:0.83rem; color:var(--text-muted);" data-id="Sesuai Ekspektasi HLT" data-en="Conforms to HLT Expectation">Sesuai Ekspektasi HLT</span>
+          </div>
+          <div style="display:flex; align-items:center; gap:8px;">
+            <span class="status-badge status-sebagian" data-id="≈ Sebagian" data-en="≈ Partial">≈ Sebagian</span>
+            <span style="font-size:0.83rem; color:var(--text-muted);" data-id="Sebagian / Bervariasi" data-en="Partially Conforming / Varied">Sebagian / Bervariasi</span>
+          </div>
+          <div style="display:flex; align-items:center; gap:8px;">
+            <span class="status-badge status-berbeda" data-id="✗ Berbeda" data-en="✗ Deviating">✗ Berbeda</span>
+            <span style="font-size:0.83rem; color:var(--text-muted);" data-id="Berbeda dari HLT" data-en="Deviates from HLT Prediction">Berbeda dari HLT</span>
+          </div>
+          <div style="display:flex; align-items:center; gap:8px;">
+            <span class="status-badge status-unexpected" data-id="⭐ Unexpected" data-en="⭐ Unexpected">⭐ Unexpected</span>
+            <span style="font-size:0.83rem; color:var(--text-muted);" data-id="Temuan Tak Terprediksi" data-en="Unexpected Field Finding">Temuan Tak Terprediksi</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEARCH & FILTER TOOLBAR -->
+    <section style="margin-bottom: 24px;" class="no-print">
+      <div class="card" style="padding:18px;">
+        <div class="grid-3" style="align-items:center;">
+          <div>
+            <label class="form-label" for="table-search-input" data-id="Cari Indikator / Kata Kunci:" data-en="Search Indicator / Keyword:">Cari Indikator / Kata Kunci:</label>
+            <input type="text" id="table-search-input" class="form-control" placeholder="Ketik kata kunci (misal: Socratic, Komplikasi, Kartu)..." data-id="Ketik kata kunci (misal: Socratic, Komplikasi, Kartu)..." data-en="Type keyword (e.g., Socratic, Complication, Card)...">
+          </div>
+          <div>
+            <label class="form-label" for="table-status-filter" data-id="Filter Status Evaluation:" data-en="Filter Evaluation Status:">Filter Status Evaluation:</label>
+            <select id="table-status-filter" class="form-select">
+              <option value="all" data-id="Semua Status (All Statuses)" data-en="All Statuses">Semua Status (All Statuses)</option>
+              <option value="sesuai" data-id="✓ Sesuai" data-en="✓ Conforming">✓ Sesuai</option>
+              <option value="sebagian" data-id="≈ Sebagian Sesuai" data-en="≈ Partially Conforming">≈ Sebagian Sesuai</option>
+              <option value="berbeda" data-id="✗ Berbeda" data-en="✗ Deviating">✗ Berbeda</option>
+              <option value="unexpected" data-id="⭐ Unexpected Finding" data-en="⭐ Unexpected Finding">⭐ Unexpected Finding</option>
+            </select>
+          </div>
+          <div>
+            <label class="form-label" for="table-session-filter" data-id="Filter Pertemuan (Session):" data-en="Filter Session:">Filter Pertemuan (Session):</label>
+            <select id="table-session-filter" class="form-select">
+              <option value="all" data-id="Semua Pertemuan (P1 - P3)" data-en="All Sessions (P1 - P3)">Semua Pertemuan (P1 - P3)</option>
+              <option value="P1" data-id="Pertemuan 1 (Audit &amp; Klasifikasi)" data-en="Session 1 (Audit &amp; Classify)">Pertemuan 1 (Audit &amp; Klasifikasi)</option>
+              <option value="P2" data-id="Pertemuan 2 (Rancangan &amp; Lab Prompt)" data-en="Session 2 (Design &amp; Prompt Lab)">Pertemuan 2 (Rancangan &amp; Lab Prompt)</option>
+              <option value="P3" data-id="Pertemuan 3 (Simulasi &amp; Memformalkan)" data-en="Session 3 (Simulation &amp; Formalizing)">Pertemuan 3 (Simulasi &amp; Memformalkan)</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ALT DATA TABLE -->
+    <section>
+      <div class="card" style="padding:16px; overflow-x:auto;">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th style="width:70px;" data-id="Kode" data-en="Code">Kode</th>
+              <th style="width:40px;" data-id="P" data-en="S">P</th>
+              <th style="width:160px;" data-id="Aktivitas" data-en="Activity">Aktivitas</th>
+              <th data-id="Indikator &amp; Prediksi HLT" data-en="Indicator &amp; HLT Prediction">Indikator &amp; Prediksi HLT</th>
+              <th data-id="Respons Aktual Lapangan (ALT)" data-en="Actual Field Response (ALT)">Respons Aktual Lapangan (ALT)</th>
+              <th style="width:110px;" data-id="Status" data-en="Status">Status</th>
+              <th data-id="Implikasi untuk HLT Siklus 2" data-en="Cycle 2 HLT Implications">Implikasi untuk HLT Siklus 2</th>
+            </tr>
+          </thead>
+          <tbody>
+
+            <!-- PERTEMUAN 1 -->
+            <tr class="filterable-row" data-status="sesuai" data-session="P1">
+              <td><strong>A1-1</strong></td>
+              <td>P1</td>
+              <td>Audit AI vs Buku Teks</td>
+              <td>LK perbandingan terisi 4 baris lengkap oleh semua pasangan.</td>
+              <td>Semua kelompok menyelesaikan 4 baris LK sebelum diskusi kelas.</td>
+              <td><span class="status-badge status-sesuai">✓ Sesuai</span></td>
+              <td>Pertahankan alokasi 20 menit berpasangan.</td>
+            </tr>
+
+            <tr class="filterable-row" data-status="sebagian" data-session="P1">
+              <td><strong>A1-2</strong></td>
+              <td>P1</td>
+              <td>Audit AI vs Buku Teks</td>
+              <td>Analisis mencakup kandungan KONSEPTUAL (justifikasi MENGAPA).</td>
+              <td>Mayoritas menyentuh konseptual. Beberapa kelompok masih prosedural. Contoh terbaik: <em>'AI cenderung memberikan langkah tanpa kerangka konsep.'</em></td>
+              <td><span class="status-badge status-sebagian">≈ Sebagian</span></td>
+              <td>Tambahkan pertanyaan panduan di LKM: 'Temukan 1 langkah AI yang tidak disertai alasan MENGAPA.'</td>
+            </tr>
+
+            <tr class="filterable-row" data-status="sebagian" data-session="P1">
+              <td><strong>A2-2</strong></td>
+              <td>P1</td>
+              <td>Observasi Video</td>
+              <td>Video dihentikan di menit ke-8, 12, 17 dengan pertanyaan pemantik.</td>
+              <td>Video ditonton via HP individual — momen henti tidak terkoordinasi. Aktivitas molor.</td>
+              <td><span class="status-badge status-sebagian">≈ Sebagian</span></td>
+              <td><strong style="color:var(--red);">REVISI KRITIS:</strong> Proyektor bersama wajib. Siapkan video offline.</td>
+            </tr>
+
+            <tr class="filterable-row" data-status="sesuai" data-session="P1">
+              <td><strong>A3-4</strong></td>
+              <td>P1</td>
+              <td>Klasifikasi Kartu</td>
+              <td>Diskusi kelas memicu perdebatan substantif antar kelompok.</td>
+              <td>Kartu 1 (Eliminasi) menjadi perdebatan utama: AI aman (A) vs AI menghambat berpikir (C).</td>
+              <td><span class="status-badge status-sesuai">✓ Sesuai</span></td>
+              <td>Jadikan debat Kartu 1 sebagai data kompetensi evaluatif di P3.</td>
+            </tr>
+
+            <tr class="filterable-row" data-status="unexpected" data-session="P1">
+              <td><strong>ET-UF</strong></td>
+              <td>P1</td>
+              <td>Exit Ticket P1</td>
+              <td><em>[TAK TERPREDIKSI]</em> Pertanyaan organik konvergen lintas kelompok.</td>
+              <td>Semua kelompok bertanya: <em>'Bagaimana mengatur batasan AI di kelas tanpa mematikan berpikir kritis?'</em> Transfer konsep sangat dini!</td>
+              <td><span class="status-badge status-unexpected">⭐ Unexpected</span></td>
+              <td>Jadikan sebagai pemantik eksplisit P2: 'Hari ini kita menjawab pertanyaan P1 dengan merancang sendiri.'</td>
+            </tr>
+
+            <!-- PERTEMUAN 2 -->
+            <tr class="filterable-row" data-status="sesuai" data-session="P2">
+              <td><strong>MK-2</strong></td>
+              <td>P2</td>
+              <td>Mini-Kuliah Prompt</td>
+              <td>Formula 5 komponen prompt pedagogis dipahami.</td>
+              <td>Penggunaan label [PERAN]+[KONTEN]+[KARAKTER]+[BATASAN]+[FORMAT] secara konsisten.</td>
+              <td><span class="status-badge status-sesuai">✓ Sesuai</span></td>
+              <td>Tambahkan komponen ke-6 [BATASAN KALIMAT] &amp; ke-7 [BATASAN DOMAIN].</td>
+            </tr>
+
+            <tr class="filterable-row" data-status="sesuai" data-session="P2">
+              <td><strong>A1P2-2</strong></td>
+              <td>P2</td>
+              <td>Lokakarya Rancangan</td>
+              <td>Peran AI BUKAN sebagai penyedia jawaban utama.</td>
+              <td>Peran AI ditempatkan dalam fungsi fasilitatif (Tutor Socratik, Pemeriksa Error, Generator Soal). Transfer P1 tuntas!</td>
+              <td><span class="status-badge status-sesuai">✓ Sesuai</span></td>
+              <td>Capaian paling signifikan P2. Pertahankan framing fasilitatif.</td>
+            </tr>
+
+            <tr class="filterable-row" data-status="unexpected" data-session="P2">
+              <td><strong>A4P2-2</strong></td>
+              <td>P2</td>
+              <td>Peer Review Prompt</td>
+              <td><em>[TAK TERPREDIKSI]</em> Rekomendasi larangan kalimat konvergen.</td>
+              <td>Kelompok merekomendasikan larangan kalimat: <em>"Caranya adalah..." / "Jawabannya adalah..."</em> di prompt Socratik.</td>
+              <td><span class="status-badge status-unexpected">⭐ Unexpected</span></td>
+              <td>Resmi dijadikan komponen ke-6 formula prompt pedagogis.</td>
+            </tr>
+
+            <!-- PERTEMUAN 3 -->
+            <tr class="filterable-row" data-status="unexpected" data-session="P3">
+              <td><strong>K3-UF</strong></td>
+              <td>P3</td>
+              <td>Komplikasi 3</td>
+              <td><em>[TAK TERPREDIKSI]</em> Insight otoritas kognitif guru.</td>
+              <td>Diartikulasikan di debrief K3: <em>'Guru harus lebih mahir matematikanya dari AI agar bisa mendeteksi kesalahan AI.'</em></td>
+              <td><span class="status-badge status-unexpected">⭐ Unexpected</span></td>
+              <td>Tambahkan komponen ke-5 Kerangka AI-Pedagogik Pribadi: 'Komitmen Mastery Matematika.'</td>
+            </tr>
+
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="suite-footer">
+    <p style="margin-top:4px; font-size:0.8rem; color:var(--text-dim);" data-id="Universitas Katolik Santo Agustinus Hippo &amp; Universitas PGRI Ronggolawe" data-en="Universitas Katolik Santo Agustinus Hippo &amp; Universitas PGRI Ronggolawe">Universitas Katolik Santo Agustinus Hippo &amp; Universitas PGRI Ronggolawe</p>
+    <p style="margin-top:2px; font-size:0.75rem; color:var(--text-dim);" data-id="Tim Peneliti: Dr. Siti Suprihatiningsih, M.Pd. &middot; Gusti Uripno, M.Pd. &middot; Rudy Hartono, S.Kom., M.Kom." data-en="Research Team: Dr. Siti Suprihatiningsih, M.Pd. &middot; Gusti Uripno, M.Pd. &middot; Rudy Hartono, S.Kom., M.Kom.">Tim Peneliti: Dr. Siti Suprihatiningsih, M.Pd. &middot; Gusti Uripno, M.Pd. &middot; Rudy Hartono, S.Kom., M.Kom.</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
